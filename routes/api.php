@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Api\CandidatureController;
+use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\EntrepriseController;
 use App\Http\Controllers\Api\OffreController;
 use App\Http\Controllers\Api\UserController;
@@ -26,11 +28,18 @@ Route::get("entrepises/{id}/show", [EntrepriseController::class, 'show']);
 Route::put("entrepises/{id}/update", [EntrepriseController::class, 'update']);
 Route::delete("entrepises/{id}/delete", [EntrepriseController::class, 'destroy']);
 
+Route::get('/categories', [CategoryController::class, 'index']);
+
 Route::get('/offres', [OffreController::class, 'index']);
 Route::post("offres/store", [OffreController::class, 'store']);
 Route::get("offres/{id}/show", [OffreController::class, 'show']);
 Route::put("offres/{id}/update", [OffreController::class, 'update']);
 Route::delete("offres/{id}/delete", [OffreController::class, 'destroy']);
+
+Route::post("candidatures/store", [CandidatureController::class, 'store']);
+Route::get("candidatures/{id}/show", [CandidatureController::class, 'show']);
+Route::put("candidatures/{id}/update", [CandidatureController::class, 'update']);
+Route::delete("candidatures/{id}/delete", [CandidatureController::class, 'destroy']);
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
