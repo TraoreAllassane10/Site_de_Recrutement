@@ -1,0 +1,52 @@
+.container-signup
+{
+    width: 40%;
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    background-color: #ffffff;
+}
+
+.wrapper
+{
+    border: #ffffff;
+    padding: 30px;
+}
+
+form
+{
+    display: flex;
+    flex-direction: column;
+}
+
+h1
+{
+    text-align: center;
+    color: rgb(64, 64, 64);
+    font-weight: 700;
+}
+
+label
+{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(64, 64, 64);
+}
+
+input
+{
+    padding: 10px;
+    border: 1px solid rgb(151, 151, 151);
+    font-size: 20px;
+}
+
+
+p{
+    color: rgb(64, 64, 64);
+    font-size: 17px;
+    padding-top: 20px;
+}
+
+a{
+    text-decoration: none;
+}
